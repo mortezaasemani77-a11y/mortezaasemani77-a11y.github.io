@@ -1,161 +1,373 @@
 <!DOCTYPE html>
-<html lang="fa" dir="rtl">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>آموزش | مرتضی آسمانی</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    * {
-      box-sizing: border-box;
-    }
+    <title>Morteza Asemani | Education</title>
 
-    body {
-      margin: 0;
-      font-family: Tahoma, Arial, sans-serif;
-      background: #f7f7f7;
-      color: #333;
-      line-height: 2;
-    }
+    <meta name="description" content="Morteza Asemani's teaching and educational activities in Persian language, literature, linguistics, filmmaking, and children's arts.">
 
-    header {
-      background: #222;
-      color: white;
-      padding: 30px 20px;
-      text-align: center;
-    }
+    <style>
+        * {
+            box-sizing: border-box;
+        }
 
-    header h1 {
-      margin: 0;
-      font-size: 30px;
-      font-weight: normal;
-    }
+        html {
+            scroll-behavior: smooth;
+        }
 
-    nav {
-      background: #333;
-      text-align: center;
-      padding: 12px;
-    }
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #2d2d2d;
+            background: #fafafa;
+            line-height: 1.7;
+        }
 
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 15px;
-      font-size: 16px;
-    }
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
 
-    nav a:hover {
-      color: #ddd;
-    }
+        /* Navigation */
 
-    main {
-      max-width: 900px;
-      margin: 50px auto;
-      padding: 0 25px;
-    }
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(250, 250, 250, 0.96);
+            border-bottom: 1px solid #e5e5e5;
+            padding: 18px 20px;
+        }
 
-    h2 {
-      font-size: 25px;
-      font-weight: normal;
-      border-bottom: 1px solid #ddd;
-      padding-bottom: 10px;
-      margin-bottom: 30px;
-    }
+        .nav-inner {
+            max-width: 1050px;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
 
-    .section {
-      background: white;
-      padding: 25px;
-      margin-bottom: 25px;
-      border-radius: 6px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-    }
+        .nav-inner a {
+            font-size: 14px;
+            color: #555;
+            transition: color 0.2s ease;
+        }
 
-    .section h3 {
-      margin-top: 0;
-      font-size: 21px;
-      font-weight: normal;
-    }
+        .nav-inner a:hover {
+            color: #000;
+        }
 
-    ul {
-      padding-right: 25px;
-    }
+        /* Hero */
 
-    footer {
-      margin-top: 60px;
-      background: #222;
-      color: #ddd;
-      text-align: center;
-      padding: 20px;
-      font-size: 14px;
-    }
+        .hero {
+            min-height: 55vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 80px 25px;
+            background: white;
+        }
 
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 24px;
-      }
+        .hero-content {
+            max-width: 850px;
+        }
 
-      nav a {
-        display: inline-block;
-        margin: 4px 8px;
-      }
+        .hero h1 {
+            margin: 0;
+            font-size: 52px;
+            font-weight: 500;
+            letter-spacing: -1px;
+        }
 
-      main {
-        margin: 30px auto;
-      }
-    }
-  </style>
+        .hero h2 {
+            margin: 20px 0 18px;
+            font-size: 22px;
+            font-weight: 400;
+            color: #555;
+        }
+
+        .hero p {
+            max-width: 700px;
+            margin: auto;
+            font-size: 18px;
+            color: #666;
+        }
+
+        .hero-line {
+            width: 55px;
+            height: 1px;
+            background: #999;
+            margin: 30px auto;
+        }
+
+        /* Main */
+
+        main {
+            max-width: 1050px;
+            margin: auto;
+            padding: 20px 25px 70px;
+        }
+
+        section {
+            padding: 75px 0;
+            border-bottom: 1px solid #e5e5e5;
+        }
+
+        section:last-child {
+            border-bottom: none;
+        }
+
+        .section-title {
+            font-size: 30px;
+            font-weight: 400;
+            margin: 0 0 25px;
+        }
+
+        .section-text {
+            max-width: 800px;
+            font-size: 17px;
+            color: #555;
+        }
+
+        /* Cards */
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+            margin-top: 40px;
+        }
+
+        .card {
+            background: white;
+            border: 1px solid #e5e5e5;
+            padding: 30px;
+            min-height: 190px;
+        }
+
+        .card h3 {
+            margin-top: 0;
+            font-size: 20px;
+            font-weight: 500;
+        }
+
+        .card p {
+            color: #666;
+            font-size: 15px;
+        }
+
+        /* Footer */
+
+        footer {
+            text-align: center;
+            padding: 35px 20px;
+            font-size: 13px;
+            color: #888;
+            background: white;
+            border-top: 1px solid #e5e5e5;
+        }
+
+        /* Mobile */
+
+        @media (max-width: 700px) {
+
+            .hero {
+                min-height: 50vh;
+                padding: 60px 20px;
+            }
+
+            .hero h1 {
+                font-size: 38px;
+            }
+
+            .hero h2 {
+                font-size: 19px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .cards {
+                gr
+              id-template-columns: 1fr;
+            }
+
+            .nav-inner {
+                gap: 18px;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-  <header>
-    <h1>آموزش</h1>
-  </header>
+    <!-- Navigation -->
 
-  <nav>
-    <a href="index.html">صفحه اصلی</a>
-    <a href="about.html">درباره من</a>
-    <a href="research.html">پژوهش‌ها</a>
-    <a href="education.html">آموزش</a>
-  </nav>
+    <nav>
+        <div class="nav-inner">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="research.html">Research</a>
+            <a href="education.html">Education</a>
+        </div>
+    </nav>
 
-  <main>
 
-    <h2>فعالیت‌های آموزشی</h2>
+    <!-- Hero -->
 
-    <div class="section">
-      <h3>دانشگاه‌ها</h3>
-      <ul>
-        <li>دانشگاه امیرکبیر — آموزش زبان فارسی به غیرفارسی‌زبانان</li>
-        <li>دانشگاه آزاد اسلامی — ادبیات داستانی و ادبیات نمایشی</li>
-        <li>دانشکده شریعتی — زبان و ادبیات فارسی</li>
-      </ul>
-    </div>
+    <section class="hero">
 
-    <div class="section">
-      <h3>آموزش هنر و تربیت مربی</h3>
-      <ul>
-        <li>آموزشگاه سرزمین باران — مدرس کلاس تربیت مربی هنر کودک</li>
-      </ul>
-    </div>
+        <div class="hero-content">
 
-    <div class="section">
-      <h3>زمینه‌های آموزشی</h3>
-      <ul>
-        <li>زبان و ادبیات فارسی</li>
-        <li>زبان فارسی به غیرفارسی‌زبانان</li>
-        <li>ادبیات داستانی</li>
-        <li>ادبیات نمایشی</li>
-        <li>فیلمنامه‌نویسی و سینما</li>
-        <li>هنر و آموزش کودک</li>
-      </ul>
-    </div>
+            <h1>Education</h1>
 
-  </main>
+            <div class="hero-line"></div>
 
-  <footer>
-    © مرتضی آسمانی
-  </footer>
+            <p>
+                Teaching and educational experience in Persian language,
+                literature, linguistics, cinema, and children's arts.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <main>
+
+        <!-- University Teaching -->
+
+        <section>
+
+            <h2 class="section-title">University Teaching</h2>
+
+            <div class="cards">
+
+                <div class="card">
+
+                    <h3>Amirkabir University of Technology</h3>
+
+                    <p>
+                        Teaching Persian as a foreign language
+                        to non-Persian-speaking learners.
+                    </p>
+
+                </div>
+
+
+                <div class="card">
+
+                    <h3>Islamic Azad University</h3>
+
+                    <p>
+                        Teaching courses in creative writing,
+                        dramatic literature, and related areas
+                        of literary and artistic studies.
+                    </p>
+
+                </div>
+
+
+                <div class="card">
+
+                    <h3>Shariati Technical and Vocational College</h3>
+
+                    <p>
+                        Teaching Persian language and literature.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Arts Education -->
+
+        <section>
+
+            <h2 class="section-title">Arts Education</h2>
+
+            <div class="cards">
+
+                <div class="card">
+
+                    <h3>Children's Arts Education</h3>
+
+                    <p>
+                        Instructor in teacher-training courses
+                        focused on arts education for children.
+                    </p>
+
+                </div>
+
+
+                <div class="card">
+
+                    <h3>Film & Visual Storytelling</h3>
+
+                    <p>
+                        Educational experience in filmmaking,
+                        visual storytelling, and audiovisual
+                        production, with a particular interest
+                        in children and young audiences.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Teaching Areas -->
+
+        <section>
+
+            <h2 class="section-title">Teaching Areas</h2>
+
+            <p class="section-text">
+                My teaching activities have covered a range of
+                interdisciplinary areas, including Persian language
+                education, Persian literature, linguistics, creative
+                writing, dramatic literature, filmmaking, and arts
+                education for children.
+            </p>
+
+        </section>
+
+
+        <!-- Educational Approach -->
+
+        <section>
+
+            <h2 class="section-title">Educational Approach</h2>
+
+            <p class="section-text">
+                My educational practice is shaped by the connection
+                between language, literature, visual storytelling,
+                and creative arts. I am particularly interested in
+                approaches that encourage active learning, creativity,
+                critical thinking, and meaningful engagement with
+                language and the arts.
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        © 2026 Morteza Asemani
+
+    </footer>
 
 </body>
 </html>
