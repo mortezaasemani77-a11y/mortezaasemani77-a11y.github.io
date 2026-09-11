@@ -4,134 +4,173 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Publications | Morteza Asemani</title>
+    <title>Morteza Asemani | Publications</title>
 
-    <meta name="description" content="Selected publications, educational books, and written works by Morteza Asemani in linguistics, film studies, education, and children's media.">
+    <meta name="description" content="Selected publications and scholarly works by Morteza Asemani in linguistics, Persian language, education, cinema, and children's media.">
 
     <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             margin: 0;
             font-family: Arial, Helvetica, sans-serif;
-            background: #ffffff;
-            color: #222222;
+            color: #2d2d2d;
+            background: #fafafa;
             line-height: 1.7;
         }
 
-        header {
-            background: #111111;
-            color: white;
-            padding: 50px 20px;
-            text-align: center;
-        }
-
-        header h1 {
-            margin: 0 0 10px;
-            font-size: 42px;
-            font-weight: 500;
-        }
-
-        header p {
-            margin: 0;
-            font-size: 18px;
-            color: #dddddd;
+        a {
+            color: inherit;
+            text-decoration: none;
         }
 
         nav {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(250, 250, 250, 0.96);
+            border-bottom: 1px solid #e5e5e5;
+            padding: 18px 20px;
+        }
+
+        .nav-inner {
+            max-width: 1050px;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .nav-inner a {
+            font-size: 14px;
+            color: #555;
+            transition: color 0.2s ease;
+        }
+
+        .nav-inner a:hover {
+            color: #000;
+        }
+
+        .hero {
+            min-height: 55vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             text-align: center;
-            padding: 18px 10px;
-            border-bottom: 1px solid #eeeeee;
+            padding: 80px 25px;
+            background: white;
         }
 
-        nav a {
-            margin: 0 12px;
-            text-decoration: none;
-            color: #333333;
-            font-size: 15px;
+        .hero-content {
+            max-width: 850px;
         }
 
-        nav a:hover {
-            text-decoration: underline;
+        .hero h1 {
+            margin: 0;
+            font-size: 52px;
+            font-weight: 500;
+            letter-spacing: -1px;
+        }
+
+        .hero p {
+            max-width: 700px;
+            margin: 25px auto 0;
+            font-size: 18px;
+            color: #666;
+        }
+
+        .hero-line {
+            width: 55px;
+            height: 1px;
+            background: #999;
+            margin: 30px auto;
         }
 
         main {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 60px 25px;
+            max-width: 1050px;
+            margin: auto;
+            padding: 20px 25px 70px;
         }
 
         section {
-            margin-bottom: 55px;
+            padding: 75px 0;
+            border-bottom: 1px solid #e5e5e5;
         }
 
-        h2 {
-            font-size: 28px;
-            font-weight: 500;
-            margin-bottom: 20px;
+        section:last-child {
+            border-bottom: none;
+        }
+
+        .section-title {
+            font-size: 30px;
+            font-weight: 400;
+            margin: 0 0 35px;
         }
 
         .publication {
-            border-top: 1px solid #eeeeee;
-            padding-top: 25px;
-            margin-top: 25px;
+            background: white;
+            border: 1px solid #e5e5e5;
+            padding: 28px 30px;
+            margin-bottom: 20px;
         }
 
-        .publication-title {
-            font-size: 20px;
+        .publication h3 {
+            margin: 0 0 12px;
+            font-size: 19px;
             font-weight: 500;
-            margin-bottom: 8px;
         }
 
-        .publication-type {
-            font-size: 14px;
-            color: #777777;
+        .publication p {
+            margin: 6px 0;
+            color: #666;
+            font-size: 15px;
+        }
+
+        .publication .type {
+            font-size: 13px;
+            color: #888;
             margin-bottom: 10px;
-        }
-
-        .book {
-            border-top: 1px solid #eeeeee;
-            padding-top: 25px;
-            margin-top: 25px;
-        }
-
-        .book-title {
-            font-size: 20px;
-            font-weight: 500;
-            margin-bottom: 8px;
-        }
-
-        p {
-            font-size: 17px;
-            margin-bottom: 18px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
 
         footer {
             text-align: center;
-            padding: 30px 20px;
-            border-top: 1px solid #eeeeee;
-            color: #777777;
-            font-size: 14px;
+            padding: 35px 20px;
+            font-size: 13px;
+            color: #888;
+            background: white;
+            border-top: 1px solid #e5e5e5;
         }
 
-        @media (max-width: 600px) {
-            header h1 {
-                font-size: 34px;
+        @media (max-width: 700px) {
+
+            .hero {
+                min-height: 50vh;
+                padding: 60px 20px;
             }
 
-            nav a {
-                display: inline-block;
-                margin: 5px 8px;
+            .hero h1 {
+                font-size: 38px;
             }
 
-            main {
-                padding: 40px 20px;
-            }
-
-            h2 {
-                font-size: 25px;
-            }
-
-            p {
+            .hero p {
                 font-size: 16px;
+            }
+
+            .nav-inner {
+                gap: 18px;
+            }
+
+            .publication {
+                padding: 22px;
             }
         }
     </style>
@@ -139,76 +178,29 @@
 
 <body>
 
-<header>
-    <h1>Publications</h1>
-    <p>Morteza Asemani · Researcher · Educator · Filmmaker</p>
-</header>
-
-<nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="research.html">Research</a>
-    <a href="film.html">Film & Media</a>
-    <a href="projects.html">Projects</a>
-    <a href="publications.html">Publications</a>
-</nav>
-
-<main>
-
-    <section>
-        <h2>Selected Academic Publications</h2>
-
-        <div class="publication">
-
-            <div class="publication-title">
-                Cinema as Language
-            </div>
-
-            <div class="publication-type">
-                Academic Article · Film Studies
-            </div>
-
-            <p>
-                A study examining cinema as a language and exploring the
-                relationship between cinematic form, visual structure,
-                and meaning.
-            </p>
-
+    <nav>
+        <div class="nav-inner">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="research.html">Research</a>
+            <a href="publications.html"
+                >Publications</a>
         </div>
+    </nav>
 
 
-        <div class="publication">
+    <section class="hero">
 
-            <div class="publication-title">
-                Silence and Unspoken Statements in Narrative Organization
-            </div>
+        <div class="hero-content">
 
-            <div class="publication-type">
-                Academic Article · Narrative Studies
-            </div>
+            <h1>Publications</h1>
 
-            <p>
-                A study of silence, omission, and unspoken elements in
-                narrative organization and their role in the construction
-                of meaning.
-            </p>
-
-        </div>
-
-
-        <div class="publication">
-
-            <div class="publication-title">
-                Power of Representation Discourse in Iranian Cinema
-            </div>
-
-            <div class="publication-type">
-                International Academic Article · Iranian Cinema
-            </div>
+            <div class="hero-line"></div>
 
             <p>
-                An interdisciplinary study addressing representation,
-                discourse, and power in Iranian cinema.
+                Selected scholarly publications and written works
+                in linguistics, Persian language, education,
+                cinema, and children's media.
             </p>
 
         </div>
@@ -216,93 +208,136 @@
     </section>
 
 
-    <section>
-        <h2>Educational Books and Written Works</h2>
+    <main>
 
-        <div class="book">
+        <!-- Journal Articles -->
 
-            <div class="book-title">
-                Elementary Science Practice Book
+        <section>
+
+            <h2 class="section-title">Journal Articles</h2>
+
+            <div class="publication">
+
+                <div class="type">Research Article</div>
+
+                <h3>
+                    Persian Word Families: A Systematic Framework
+                    for Vocabulary Education Based on Morphological
+                    and Semantic Relations
+                </h3>
+
+                <p>
+                    Research on the definition, identification,
+                    and educational application of Persian word families.
+                </p>
+
             </div>
 
-            <p>
-                An educational resource developed for students with
-                hearing-related educational needs.
-            </p>
 
-        </div>
+            <div class="publication">
 
+                <div class="type">Research Article</div>
 
-        <div class="book">
+                <h3>
+                    Language and Power in Abbas Kiarostami's Cinema:
+                    An Analysis of the Unspoken in Taste of Cherry
+                </h3>
 
-            <div class="book-title">
-                Social and Economic Skills for Grades Two and Three
+                <p>
+                    A discourse-oriented study of silence, omission,
+                    repetition, and the distribution of narrative
+                    power between filmmaker, film, and viewer.
+                </p>
+
             </div>
 
-            <p>
-                An educational resource focusing on the development of
-                practical social and economic skills.
-            </p>
-
-        </div>
+        </section>
 
 
-        <div class="book">
+        <!-- Books and Chapters -->
 
-            <div class="book-title">
-                Movement and Rhythmic Games
+        <section>
+
+            <h2 class="section-title">Books & Book Chapters</h2>
+
+            <div class="publication">
+
+                <div class="type">Book / Chapter</div>
+
+                <h3>
+                    Selected Works in Persian Language,
+                    Literature, and Children's Media
+                </h3>
+
+                <p>
+                    A selection of scholarly and creative works
+                    related to language, literature, education,
+                    and children's culture.
+                </p>
+
             </div>
 
-            <p>
-                An educational work concerning movement and rhythmic
-                activities, published by Danjeh.
-            </p>
-
-        </div>
-
-    </section>
+        </section>
 
 
-    <section>
-        <h2>Other Written Works</h2>
+        <!-- Conference Papers -->
 
-        <p>
-            In addition to academic publications and educational books,
-            I have published more than seven articles and short stories
-            in cultural and educational magazines.
-        </p>
+        <section>
 
-        <p>
-            My written work reflects my broader interests in language,
-            education, children's culture, visual media, and storytelling.
-        </p>
+            <h2 class="section-title">Conference Papers</h2>
 
-    </section>
+            <div class="publication">
+
+                <div class="type">Conference Research</div>
+
+                <h3>
+                    Selected Conference Papers
+                </h3>
+
+                <p>
+                    Research presented at academic conferences
+                    in linguistics, language education, literature,
+                    cinema, and children's media.
+                </p>
+
+            </div>
+
+        </section>
 
 
-    <section>
-        <h2>Research and Writing</h2>
+        <!-- Other Written Works -->
 
-        <p>
-            My academic writing brings together linguistics, film studies,
-            narrative analysis, education, and children's media.
-        </p>
+        <section>
 
-        <p>
-            Current research interests include Persian vocabulary and
-            word formation, language education, information literacy,
-            artificial intelligence in education, inclusive learning,
-            and the relationship between language and visual storytelling.
-        </p>
+            <h2 class="section-title">Other Written Works</h2>
 
-    </section>
+            <div class="publication">
 
-</main>
+                <div class="type">Creative & Critical Writing</div>
 
-<footer>
-    © 2026 Morteza Asemani
-</footer>
+                <h3>
+                    Writing on Cinema, Children's Culture,
+                    and Visual Storytelling
+                </h3>
+
+                <p>
+                    Critical and creative writings developed through
+                    research and more than three decades of filmmaking
+                    and educational practice.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        © 2026 Morteza Asemani
+
+    </footer>
 
 </body>
 </html>
-              
